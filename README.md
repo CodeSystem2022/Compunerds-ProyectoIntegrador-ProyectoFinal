@@ -8,7 +8,6 @@
 <h2> Integrantes 🚀</h2>
 <br> 
 <ul style="list-style-type: none;">
-    <li><b>👩‍🚀 <a href="https://github.com/carlafaes">Carla Faes</a></b></li>
     <li><b>👩‍🚀 <a href="https://github.com/GiulianaDeEt">Giuliana Dealbera</a></b></li>
     <li><b>👨‍🚀 <a href="https://github.com/kvnsosa">Kevin Sosa</a></b></li>
     <li><b>👨‍🚀 <a href="https://github.com/Nico-Segovia">Nicolas Segovia</a></b></li>
