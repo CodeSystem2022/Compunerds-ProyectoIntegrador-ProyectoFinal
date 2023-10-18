@@ -49,3 +49,54 @@ body{
 section{
     padding: 13rem 9%;
 }
+
+
+
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--yellow);
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--light-gray);
+}
+
+header .logo img{
+    padding-right: .5rem;
+}
+
+
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--light-gray);
+}
+
+header .navbar a:hover{
+    color:var(--red)
+}
+
+#menu-bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border: .1rem solid var(--light-gray);
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+
+
+
+
