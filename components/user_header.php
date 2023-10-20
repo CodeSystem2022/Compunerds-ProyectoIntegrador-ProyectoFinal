@@ -15,8 +15,6 @@ if(isset($message)){
     <section class="flex">
         <a href="#" class="logo"><img src="images/burger_logo.png" alt="Burger Logo" height="22">FastFood</a>
 
-        <div id="menu-bar" class="fas fa-bars"></div>
-
         <nav class="navbar">
             <a href="home.php">home</a>
             <a href="about.php">about</a>            
@@ -34,7 +32,9 @@ if(isset($message)){
             <a href="search.php"><i class="fas fa-search"></i></a>
             <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_user_cart_items; ?>)</span></a>
             <div id="user-btn" class="fas fa-user"></div>
+            <div id="menu-bar" class="fas fa-bars"></div>
         </div>
+        
 
         <div class="profile">
             <?php

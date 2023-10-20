@@ -107,7 +107,7 @@ section{
 }
 
 /* header */
-.header{
+header{
     position: sticky;
     top: 0; left: 0;
     z-index: 1000;
@@ -115,54 +115,54 @@ section{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-.header .flex{    
+header .flex{    
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
 }
 
-.header .logo{
+header .flex .logo{
     font-size: 2.5rem;
     font-weight: bolder;
     color: var(--light-gray);
 }
 
-header .logo img{
+header .flex  .logo img{
     padding-right: .5rem;
 }
 
 
-header .navbar a{
+header .flex  .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
     color: var(--light-gray);
 }
 
-header .navbar a:hover{
+header .flex  .navbar a:hover{
     color:var(--red)
 }
 
-header .navbar span{
+header .flex  .navbar span{
     font-size: 1.5rem;
 }
 
-header .icons >*{
+header .flex  .icons >*{
     font-size: 2.2rem;
     color: var(--light-gray);
     cursor: pointer;
     margin-left: 1.5rem;
 }
 
-header .icons span{
+header .flex  .icons span{
     font-size: 1.8rem;
 }
 
-header .icons >*:hover{
+header .flex  .icons >*:hover{
     color:var(--red)
 }
 
-.header .profile{
+header .flex  .profile{
     position: absolute;
     top: 120%; right: 2rem;
     border: var(--border);
@@ -180,24 +180,73 @@ header .icons >*:hover{
     }
 }
 
-header .profile.active{
+header .flex  .profile.active{
     display: inline-block;
 }
 
-header .profile .name{
+header .flex  .profile .name{
     margin-bottom: .5rem;
     font-size: 2rem;
     color: var(--dark-gray);
 }
 
 #menu-bar{
-    font-size: 3rem;
+    font-size: 2.2rem;
     cursor: pointer;
     color: #666;
-    border: .1rem solid var(--light-gray);
-    border-radius: .3rem;
-    padding: .5rem 1.5rem;
     display: none;
 }
 
 
+
+
+
+/* media queries*/
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px){
+    #menu-bar{
+        display: inline-block;
+    }
+
+    header .flex  .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--white);
+        border-top: .1rem solid rgba(0,0,0,.1);
+        transition: .1s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .flex  .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .flex .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0,0,0,.1);
+        border-left: .5rem solid var(--red);
+        background: var(--white);
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    header .flex .logo{
+        font-size: 2rem;
+    }
+
+    header .flex  .logo img{
+        height: 2rem;
+    }
+}
