@@ -1,2 +1,280 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
+
+/* estilos globales */
+:root{
+    --red: #e12c2c;
+    --yellow: #ffc809;
+    --light-gray: #666;
+    --dark-gray: #333;
+    --white: #f7f7f7;
+    --border: .2rem solid var(--light-gray);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition:all .2s linear;
+}
+
+*::selection{
+    background:var(--red);
+    color:var(--white);
+}
+
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--red);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background: var(--white);
+}
+
+section{
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+.title{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+    color: var(--light-gray);
+    text-transform: uppercase;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: .8rem 3rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+}
+
+.btn{
+    border: .2rem solid var(--red);
+    color: var(--red);
+}
+
+.delete-btn{
+    border: .2rem solid var(--dark-gray);
+    color: var(--dark-gray);
+}
+
+.btn::before, .delete-btn::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--red);
+    transition: .3s linear;
+    z-index: -1;
+}
+
+.btn:hover::before, .delete-btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover, .delete-btn:hover{
+    color: var(--yellow);
+}
+
+/* header */
+header{
+    position: sticky;
+    top: 0; left: 0;
+    z-index: 1000;
+    background: var(--yellow);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .flex{    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .flex .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--light-gray);
+}
+
+header .flex  .logo img{
+    padding-right: .5rem;
+}
+
+
+header .flex  .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--light-gray);
+}
+
+header .flex  .navbar a:hover{
+    color:var(--red)
+}
+
+header .flex  .navbar span{
+    font-size: 1.5rem;
+}
+
+header .flex  .icons >*{
+    font-size: 2.2rem;
+    color: var(--light-gray);
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+header .flex  .icons span{
+    font-size: 1.8rem;
+}
+
+header .flex  .icons >*:hover{
+    color:var(--red)
+}
+
+header .flex  .profile{
+    position: absolute;
+    top: 120%; right: 2rem;
+    border: var(--border);
+    background-color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    width: 30rem;
+    display: none;
+    animation: fadeIn .2s linear;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translateY(-1rem);
+    }
+}
+
+header .flex  .profile.active{
+    display: inline-block;
+}
+
+header .flex  .profile .name{
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    color: var(--dark-gray);
+}
+
+#menu-bar{
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #666;
+    display: none;
+}
+
+
+
+
+.footer{
+    text-align: center;
+    background: linear-gradient(transparent, #dbdbdb);
+}
+
+.footer .links a{
+    margin: 1rem;
+}
+
+.footer .credit{
+    padding-top: 2rem;    
+    font-size: 1.7rem;
+}
+
+.footer .credit span{
+    color: var(--red);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries*/
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px){
+    #menu-bar{
+        display: inline-block;
+    }
+
+    header .flex  .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--white);
+        border-top: .1rem solid rgba(0,0,0,.1);
+        transition: .1s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .flex  .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .flex .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0,0,0,.1);
+        border-left: .5rem solid var(--red);
+        background: var(--white);
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    header .flex .logo{
+        font-size: 2rem;
+    }
+
+    header .flex  .logo img{
+        height: 2rem;
+    }
+}
