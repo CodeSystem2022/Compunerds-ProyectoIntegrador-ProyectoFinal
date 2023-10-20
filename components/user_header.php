@@ -33,7 +33,7 @@ if(isset($message)){
             ?>
             <a href="search.php"><i class="fas fa-search"></i></a>
             <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_user_cart_items; ?>)</span></a>
-            <a href="user-btn"><i class="fas fa-user"></i></a>
+            <div id="user-btn" class="fas fa-user"></div>
         </div>
 
         <div class="profile">

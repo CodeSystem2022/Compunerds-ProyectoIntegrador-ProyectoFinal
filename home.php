@@ -17,11 +17,13 @@ if(isset($_SESSION['user_id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodTruck</title>
+    <title>UTN - final project CompuNerds</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>" >
+
+    <link rel="icon" href="images/favicon_icon.png" type="image/png">
 
 </head>
 <body>
@@ -33,7 +35,7 @@ if(isset($_SESSION['user_id'])){
     <?php include 'components/footer.php'?>
     <!--seccion footer fin-->
 
-    <script src="js/scripts.js"></script>
+    <script src="js/script.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>
 
