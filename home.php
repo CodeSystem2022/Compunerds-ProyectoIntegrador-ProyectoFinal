@@ -28,11 +28,11 @@ if(isset($_SESSION['user_id'])){
 </head>
 <body>
     <!--seccion header inicio-->
-    <?php include 'components/user_header.php'?>
+    <?php include 'components/user_header.php'; ?>
     <!--seccion header fin-->
 
     <!--seccion footer inicio-->
-    <?php include 'components/footer.php'?>
+    <?php include 'components/footer.php'; ?>
     <!--seccion footer fin-->
 
     <script src="js/script.js?v=<?php echo time(); ?>"></script>

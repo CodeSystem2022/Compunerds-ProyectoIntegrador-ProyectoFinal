@@ -200,6 +200,33 @@ header .flex  .profile .name{
 
 
 
+.footer{
+    text-align: center;
+    background: linear-gradient(transparent, #dbdbdb);
+}
+
+.footer .links a{
+    margin: 1rem;
+}
+
+.footer .credit{
+    padding-top: 2rem;    
+    font-size: 1.7rem;
+}
+
+.footer .credit span{
+    color: var(--red);
+}
+
+
+
+
+
+
+
+
+
+
 
 /* media queries*/
 
