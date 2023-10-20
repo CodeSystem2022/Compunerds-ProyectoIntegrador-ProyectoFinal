@@ -7,6 +7,7 @@
     --light-gray: #666;
     --dark-gray: #333;
     --white: #f7f7f7;
+    --border: .2rem solid var(--light-gray);
 }
 
 *{
@@ -48,7 +49,9 @@ body{
 }
 
 section{
-    padding: 13rem 9%;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 
@@ -94,21 +97,23 @@ section{
 .btn:hover{
     color: var(--yellow);
 }
-
 /* header */
-header{
-    position: fixed;
-    top: 0; left: 0; right: 0;
+.header{
+    position: sticky;
+    top: 0; left: 0;
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background: var(--yellow);
-    padding: 2rem 9%;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-header .logo{
+.header .flex{    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header .logo{
     font-size: 2.5rem;
     font-weight: bolder;
     color: var(--light-gray);
@@ -127,6 +132,41 @@ header .navbar a{
 
 header .navbar a:hover{
     color:var(--red)
+}
+
+header .navbar span{
+    font-size: 1.5rem;
+}
+
+header .icons >*{
+    font-size: 2.2rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+header .icons span{
+    font-size: 1.8rem;
+}
+
+header .icons >*:hover{
+    color:var(--red)
+}
+
+header .profile{
+    position: absolute;
+    top: 120%; right: 2rem;
+    border: var(--border);
+    background-color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    width: 30rem;
+}
+
+header .profile .name{
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    color: var(--dark-gray);
 }
 
 #menu-bar{
