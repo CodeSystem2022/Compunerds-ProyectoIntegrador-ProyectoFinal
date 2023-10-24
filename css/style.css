@@ -221,11 +221,13 @@ header .flex  .profile .name{
 
 .home .content{
     flex: 1 1 40rem;
-    padding-top: .5rem;
+    padding-left: 6.5rem;
 }
 
 .home .image{
-    flex: 1 1 40rem;
+    flex: 1 1 40rem;    
+    margin-bottom: 5rem;
+    padding-right: 2rem;
 }
 
 .home .image img{

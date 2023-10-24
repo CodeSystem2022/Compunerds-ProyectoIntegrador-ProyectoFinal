@@ -32,7 +32,7 @@ if(isset($_SESSION['user_id'])){
     <!--seccion header fin-->
     
     <!--seccion portada inicio-->
-    <section class="home" id="home">
+    <div class="home" id="home">
         <div class="content">
             <h3>Más sabor, menos espera</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, dolorem? 
@@ -44,8 +44,37 @@ if(isset($_SESSION['user_id'])){
             <img src="images/home_burger.png" alt="burger">
         </div>
 
-    </section>
+    </div>
     <!--seccion portada fin-->
+
+    <!--seccion categorias inicio-->
+    <section class="category">
+        <h1 class="title">Categorías</h1>
+            <div class="box_container">
+                <a href="#" class="box">
+                    <img src="images/category_icon1.png" alt="burger icono">
+                    <h3>Burgers</h3>
+                </a>
+                
+                <a href="#" class="box">
+                    <img src="images/category_icon2.png" alt="pizza icono">
+                    <h3>Pizzas</h3>
+                </a>
+                
+                <a href="#" class="box">
+                    <img src="images/category_icon3.png" alt="vegano icono">
+                    <h3>Vegano</h3>
+                </a>
+
+                <a href="#" class="box">
+                    <img src="images/category_icon4.png" alt="no gluten icono">
+                    <h3>Sin gluten</h3>
+                </a>
+
+            </div>
+        </h1>
+    </section>
+    <!--seccion categorias fin-->
 
 
     <!--seccion footer inicio-->
