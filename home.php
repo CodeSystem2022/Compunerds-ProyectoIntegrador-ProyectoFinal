@@ -30,6 +30,24 @@ if(isset($_SESSION['user_id'])){
     <!--seccion header inicio-->
     <?php include 'components/user_header.php'; ?>
     <!--seccion header fin-->
+    
+    <!--seccion home inicio-->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Más sabor, menos espera</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, dolorem? 
+                Vel nisi nesciunt dicta quisquam porro, praesentium amet at placeat sint explicabo? 
+                Atque maiores illum dolor at fugit ullam quidem?</p>
+                <a href="#" class="btn">Ordena Ya!</a>
+        </div>
+
+        <div class="image">
+            <img src="images/home_burger.png" alt="burger">
+        </div>
+
+    </section>
+    <!--seccion home fin-->
+
 
     <!--seccion footer inicio-->
     <?php include 'components/footer.php'; ?>
