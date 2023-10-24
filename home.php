@@ -38,9 +38,8 @@ if(isset($_SESSION['user_id'])){
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, dolorem? 
                 Vel nisi nesciunt dicta quisquam porro, praesentium amet at placeat sint explicabo? 
                 Atque maiores illum dolor at fugit ullam quidem?</p>
-                <a href="#" class="btn">Ordena Ya!</a>
+            <a href="#" class="btn">Ordena Ya!</a>
         </div>
-
         <div class="image">
             <img src="images/home_burger.png" alt="burger">
         </div>

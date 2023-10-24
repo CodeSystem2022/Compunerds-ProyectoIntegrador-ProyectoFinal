@@ -221,13 +221,37 @@ header .flex  .profile .name{
 
 .home .content{
     flex: 1 1 40rem;
-    padding-top: 6.5rem;
+    padding-top: .5rem;
 }
 
 .home .image{
     flex: 1 1 40rem;
 }
 
+.home .image img{
+    width: 100%;
+    padding: 2rem;
+    animation: float 3s linear infinite;
+}
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(3rem);
+    }
+}
+
+.home .content h3{
+    font-size: 4rem;
+    color: var(--dark-gray);
+}
+
+.home .content p{    
+    font-size: 1.7rem;
+    color: var(--light-gray);
+    padding: 1rem 0;
+}
 
 /* ------------------ */
 /* ------footer------ */
