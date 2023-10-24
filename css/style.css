@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
-/* estilos globales */
+
+/* ---------------------------- */
+/* ------estilos globales------ */
+/* ---------------------------- */
 :root{
     --red: #e12c2c;
     --yellow: #ffc809;
@@ -51,7 +54,7 @@ body{
 section{
     padding: 2rem;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1300px;
 }
 
 
@@ -106,7 +109,9 @@ section{
     color: var(--yellow);
 }
 
-/* header */
+/* ------------------ */
+/* ------header------ */
+/* ------------------ */
 header{
     position: sticky;
     top: 0; left: 0;
@@ -130,6 +135,7 @@ header .flex .logo{
 
 header .flex  .logo img{
     padding-right: .5rem;
+    padding-left: 2rem;
 }
 
 
@@ -198,8 +204,34 @@ header .flex  .profile .name{
 }
 
 
+/* ---------------- */
+/* ------home------ */
+/* ---------------- */
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background: url(../images/home_bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+.home .image{
+    flex: 1 1 40rem;
+}
 
 
+/* ------------------ */
+/* ------footer------ */
+/* ------------------ */
 .footer{
     text-align: center;
     background: linear-gradient(transparent, #dbdbdb);
@@ -227,8 +259,9 @@ header .flex  .profile .name{
 
 
 
-
-/* media queries*/
+/* -------------- */
+/* media queries */
+/* -------------- */
 
 @media(max-width:991px){
     html{
