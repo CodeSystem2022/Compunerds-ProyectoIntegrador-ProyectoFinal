@@ -43,7 +43,6 @@ if(isset($_SESSION['user_id'])){
         <div class="image">
             <img src="images/home_burger.png" alt="burger">
         </div>
-
     </div>
     <!--seccion portada fin-->
 
@@ -70,11 +69,35 @@ if(isset($_SESSION['user_id'])){
                     <img src="images/category_icon4.png" alt="no gluten icono">
                     <h3>Sin gluten</h3>
                 </a>
-
             </div>
         </h1>
     </section>
     <!--seccion categorias fin-->
+
+    
+    <!--seccion top 3 inicio-->
+
+    <section class="products">
+    <h1 class="title">Los favoritos del menú</h1>
+    <div class="box-container">
+        <?php
+            $select_products = $conn -> prepare("SELECT * FROM `products` LIMIT 3");
+            $select_products -> execute();
+            if($select_products -> rowcount() > 0){
+                while($fetch_products = $select_products -> fetch(PDO::FETCH_ASSOC)){
+
+        ?>
+        <form action = "" method="POST" class="box">
+        <?php
+                }
+            }else{
+                    
+            }
+        ?>
+    </div>
+    </section>
+
+    <!--seccion top 3 fin-->
 
 
     <!--seccion footer inicio-->
