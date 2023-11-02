@@ -8,7 +8,7 @@
 :root{
     --red: #e12c2c;
     --yellow: #ffc809;
-    --light-gray: #666;
+    --light-gray: #959595;
     --dark-gray: #333;
     --white: #f7f7f7;
     --border: .2rem solid var(--light-gray);
@@ -110,6 +110,16 @@ section{
     color: var(--yellow);
 }
 
+.empty{
+    border:var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--red);
+    text-transform: capitalize;
+    width: 100%;
+}
+
 /* ------------------ */
 /* ------header------ */
 /* ------------------ */
@@ -131,7 +141,7 @@ header .flex{
 header .flex .logo{
     font-size: 2.5rem;
     font-weight: bolder;
-    color: var(--light-gray);
+    color: var(--dark-gray);
 }
 
 header .flex  .logo img{
@@ -143,7 +153,7 @@ header .flex  .logo img{
 header .flex  .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
-    color: var(--light-gray);
+    color: var(--dark-gray);
 }
 
 header .flex  .navbar a:hover{
@@ -156,7 +166,7 @@ header .flex  .navbar span{
 
 header .flex  .icons >*{
     font-size: 2.2rem;
-    color: var(--light-gray);
+    color: var(--dark-gray);
     cursor: pointer;
     margin-left: 1.5rem;
 }
@@ -302,6 +312,119 @@ header .flex  .profile .name{
     color: #fff;
 }
 
+/* ------------------ */
+/* ------productos------ */
+/* ------------------ */
+.products .box-container{    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 32rem);
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.products .box-container .box{
+    padding: 2rem;
+    position: relative;
+    border: var(--border);    
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.products .box-container .box .fa-eye, .products .box-container .box .fa-shopping-cart{
+    position: absolute;
+    top: 1rem;
+    height: 3.6rem;
+    width: 3.6rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: var(--border);
+    border-radius: .5rem;
+    background-color: var(--white);
+    line-height: 3.3rem;
+    color: var(--light-gray);
+    text-align: center;
+    transition: .2s linear;
+}
+
+.products .box-container .box .fa-eye:hover, .products .box-container .box .fa-shopping-cart:hover{
+    border: var(--red);
+    background-color: var(--red);
+    color: var(--yellow);
+}
+
+.products .box-container .box .fa-eye{
+    left: -10rem;
+}
+
+.products .box-container .box:hover .fa-eye{
+    left: 2rem;
+}
+
+.products .box-container .box .fa-shopping-cart{
+    right: -10rem;
+}
+
+.products .box-container .box:hover .fa-shopping-cart{
+    right: 2rem;
+}
+
+.products .box-container .box .cat{
+    font-size: 1.8rem;
+    color: var(--light-gray);
+}
+
+.products .box-container .box .cat:hover{
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.products .box-container .box .name{
+    font-size: 2rem;
+    color: var(--dark-gray);
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.products .box-container .box .flex{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.products .box-container .box .flex .price{
+    font-size: 2rem;
+    color: var(--dark-gray);
+    margin-right: auto;
+}
+
+.products .box-container .box .flex .price span{
+    font-size: 2rem;
+    color: var(--light-gray);
+
+}
+
+.products .box-container .box .flex .qty{
+    padding: .5rem;
+    border: var(--border);
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+    background-color: var(--white);
+}
+
+
+
+
+
+
 
 /* ------------------ */
 /* ------footer------ */
@@ -382,5 +505,9 @@ header .flex  .profile .name{
 
     header .flex  .logo img{
         height: 2rem;
+    }
+
+    .products .box-container{
+        grid-template-columns: 1fr;
     }
 }
