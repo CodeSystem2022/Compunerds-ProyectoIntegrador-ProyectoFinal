@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
       $_SESSION['admin_id'] = $fetch_admin_id['id'];
       header('location:dashboard.php');
    }else{
-      $message[] = 'incorrect username or password!';
+      $message[] = 'usuario o contraseña incorrecta!';
    }
 
 }
@@ -34,10 +34,8 @@ if(isset($_POST['submit'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>login</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -56,20 +54,17 @@ if(isset($message)){
 }
 ?>
 
-<!-- admin login form section starts  -->
-
+<!-- adming login inicio  -->
 <section class="form-container">
-
    <form action="" method="POST">
-      <h3>login now</h3>
-      <p>default username = <span>admin</span> & password = <span>111</span></p>
-      <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <h3>¡bienvenido!</h3>
+      <p>default usuario = <span>admin</span> | contraseña = <span>111</span></p>
+      <input type="text" name="name" maxlength="20" required placeholder="ingresa tu usuario" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="pass" maxlength="20" required placeholder="ingresa tu contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="login now" name="submit" class="btn">
    </form>
-
 </section>
+<!-- adming login fin -->
 
-<!-- admin login form section ends -->
 </body>
 </html>
