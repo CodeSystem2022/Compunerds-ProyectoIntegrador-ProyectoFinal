@@ -25,7 +25,7 @@ if(isset($_GET['delete'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>messages</title>
+    <title>mensajes</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -37,7 +37,7 @@ if(isset($_GET['delete'])){
 <!-- sección mensajes inicio  -->
 
 <section class="messages">
-    <h1 class="heading">messages</h1>
+    <h1 class="heading">mensajes</h1>
 
     <div class="box-container">
 
@@ -52,12 +52,12 @@ if(isset($_GET['delete'])){
         <p> number : <span><?= $fetch_messages['number']; ?></span> </p>
         <p> email : <span><?= $fetch_messages['email']; ?></span> </p>
         <p> message : <span><?= $fetch_messages['message']; ?></span> </p>
-        <a href="messages.php?delete=<?= $fetch_messages['id']; ?>" class="delete-btn" onclick="return confirm('delete this message?');">delete</a>
+        <a href="messages.php?delete=<?= $fetch_messages['id']; ?>" class="delete-btn" onclick="return confirm('delete this message?');">eliminar</a>
     </div>
     <?php
             }
         }else{
-            echo '<p class="empty">you have no messages</p>';
+            echo '<p class="empty">no hay mensajes por aquí</p>';
         }
     ?>
 

@@ -56,7 +56,7 @@ if(isset($message)){
 <section class="form-container">
    <form action="" method="POST">
       <h3>¡bienvenido!</h3>
-      <p>default usuario = <span>admin</span> | contraseña = <span>111</span></p>
+      <p>default usuario = <span>adminutn</span> | contraseña = <span>utn2023</span></p>
       <input type="text" name="name" maxlength="20" required placeholder="ingresa tu usuario" class="box" oninput="this.value = this.value.replace(/\s/g, '')" autocomplete="off">
       <input type="password" name="pass" maxlength="20" required placeholder="ingresa tu contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')" autocomplete="off">
       <input type="submit" value="login now" name="submit" class="btn">

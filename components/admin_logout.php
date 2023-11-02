@@ -5,5 +5,5 @@
     session_unset();
     session_destroy();
 
-    header('location:../home.php');
+    header('location:../admin/admin_login.php');
 ?>

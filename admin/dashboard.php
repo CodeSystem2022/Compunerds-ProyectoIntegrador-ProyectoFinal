@@ -18,7 +18,7 @@ if(!isset($admin_id)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dashboard</title>
+    <title>tablero</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -33,14 +33,14 @@ if(!isset($admin_id)){
 
 <section class="dashboard">
 
-    <h1 class="heading">dashboard</h1>
+    <h1 class="heading">tablero</h1>
 
     <div class="box-container">
 
     <div class="box">
-        <h3>welcome!</h3>
+        <h3>¡Saludos!</h3>
         <p><?= $fetch_profile['name']; ?></p>
-        <a href="update_profile.php" class="btn">update profile</a>
+        <a href="update_profile.php" class="btn">modificar perfil</a>
     </div>
 
     <div class="box">
@@ -53,8 +53,8 @@ if(!isset($admin_id)){
             }
         ?>
         <h3><span>$</span><?= $total_pendings; ?><span>/-</span></h3>
-        <p>total pendings</p>
-        <a href="placed_orders.php" class="btn">see orders</a>
+        <p>pendientes</p>
+        <a href="placed_orders.php" class="btn">ver orders</a>
     </div>
 
     <div class="box">
@@ -67,8 +67,8 @@ if(!isset($admin_id)){
             }
         ?>
         <h3><span>$</span><?= $total_completes; ?><span>/-</span></h3>
-        <p>total completes</p>
-        <a href="placed_orders.php" class="btn">see orders</a>
+        <p>completados</p>
+        <a href="placed_orders.php" class="btn">ver ordeness</a>
     </div>
 
     <div class="box">
@@ -78,8 +78,8 @@ if(!isset($admin_id)){
             $numbers_of_orders = $select_orders->rowCount();
         ?>
         <h3><?= $numbers_of_orders; ?></h3>
-        <p>total orders</p>
-        <a href="placed_orders.php" class="btn">see orders</a>
+        <p>ordenes total</p>
+        <a href="placed_orders.php" class="btn">ver ordenes</a>
     </div>
 
     <div class="box">
@@ -89,8 +89,8 @@ if(!isset($admin_id)){
             $numbers_of_products = $select_products->rowCount();
         ?>
         <h3><?= $numbers_of_products; ?></h3>
-        <p>products added</p>
-        <a href="products.php" class="btn">see products</a>
+        <p>productos agregados</p>
+        <a href="products.php" class="btn">ver productos</a>
     </div>
 
     <div class="box">
@@ -100,8 +100,8 @@ if(!isset($admin_id)){
             $numbers_of_users = $select_users->rowCount();
         ?>
         <h3><?= $numbers_of_users; ?></h3>
-        <p>users accounts</p>
-        <a href="users_accounts.php" class="btn">see users</a>
+        <p>cuentas usuarios</p>
+        <a href="users_accounts.php" class="btn">ver usarios</a>
     </div>
 
     <div class="box">
@@ -112,7 +112,7 @@ if(!isset($admin_id)){
         ?>
         <h3><?= $numbers_of_admins; ?></h3>
         <p>admins</p>
-        <a href="admin_accounts.php" class="btn">see admins</a>
+        <a href="admin_accounts.php" class="btn">ver admins</a>
     </div>
 
     <div class="box">
@@ -122,8 +122,8 @@ if(!isset($admin_id)){
             $numbers_of_messages = $select_messages->rowCount();
         ?>
         <h3><?= $numbers_of_messages; ?></h3>
-        <p>new messages</p>
-        <a href="messages.php" class="btn">see messages</a>
+        <p>nuevo mensaje</p>
+        <a href="messages.php" class="btn">ver mensaje</a>
     </div>
 
     </div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
 :root{
-    --main-color:#4834d4;
+    --main-color:#689009;
     --red:#e74c3c;
     --orange:#f39c12;
     --black:#34495e;
@@ -117,7 +117,7 @@ section{
 }
 
 .message i:hover{
-    color:var(--black)  
+    color:var(--black);
 }
 
 .heading{
@@ -308,7 +308,7 @@ section{
     color:var(--light-color);
 }
 
-/* --PRODUCTOS-- */
+/* --PRODUCTO-- */
 .add-products form{
     margin:0 auto;
     max-width: 50rem;
@@ -389,7 +389,6 @@ section{
     font-size: 1.5rem;
 }
 
-/* --UPDATE DEL PRODUCTO-- */
 .update-product form{
     margin:0 auto;
     max-width: 50rem;
@@ -425,4 +424,99 @@ section{
 .update-product form span{
     font-size: 1.7rem;
     color:var(--black);
+}
+
+.placed-orders .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.placed-orders .box-container .box{
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    padding:2rem;
+    padding-top: 1rem;
+}
+
+.placed-orders .box-container .box p{
+    padding: .5rem 0;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    color:var(--black);
+}
+
+.placed-orders .box-container .box p span{
+    color:var(--main-color);
+}
+
+.placed-orders .box-container .box .drop-down{
+    width: 100%;
+    margin:1rem 0;
+    background-color: var(--light-bg);
+    padding:1rem 1.4rem;
+    font-size: 2rem;
+    color:var(--black);
+    border:var(--border);
+    border-radius: .5rem;
+}
+
+.accounts .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*--CUENTA-- */
+.accounts .box-container .box{
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    padding:2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.accounts .box-container .box p{
+    padding: .5rem 0;
+    font-size: 1.8rem;
+    color:var(--black);
+}
+
+.accounts .box-container .box p span{
+    color:var(--main-color);
+}
+
+.messages .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.messages .box-container .box{
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    padding:2rem;
+    padding-top: 1rem;
+}
+
+.messages .box-container .box p{
+    padding: .5rem 0;
+    font-size: 1.8rem;
+    color:var(--black);
+}
+
+.messages .box-container .box p span{
+    color:var(--main-color);
 }
