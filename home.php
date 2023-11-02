@@ -50,22 +50,22 @@ if(isset($_SESSION['user_id'])){
     <section class="category">
         <h1 class="title">Categorías</h1>
             <div class="box_container">
-                <a href="#" class="box">
+                <a href="http://localhost/Compunerds-ProyectoIntegrador-ProyectoFinal/category.php?category=burgers" class="box">
                     <img src="images/category_icon1.png" alt="burger icono">
                     <h3>Burgers</h3>
                 </a>
                 
-                <a href="#" class="box">
+                <a href="http://localhost/Compunerds-ProyectoIntegrador-ProyectoFinal/category.php?category=pizzas" class="box">
                     <img src="images/category_icon2.png" alt="pizza icono">
                     <h3>Pizzas</h3>
                 </a>
                 
-                <a href="#" class="box">
+                <a href="http://localhost/Compunerds-ProyectoIntegrador-ProyectoFinal/category.php?category=vegano" class="box">
                     <img src="images/category_icon3.png" alt="vegano icono">
                     <h3>Vegano</h3>
                 </a>
 
-                <a href="#" class="box">
+                <a href="http://localhost/Compunerds-ProyectoIntegrador-ProyectoFinal/category.php?category=singluten" class="box">
                     <img src="images/category_icon4.png" alt="no gluten icono">
                     <h3>Sin gluten</h3>
                 </a>
