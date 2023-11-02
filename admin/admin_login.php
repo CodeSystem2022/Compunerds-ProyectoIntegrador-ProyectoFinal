@@ -21,9 +21,7 @@ if(isset($_POST['submit'])){
    }else{
       $message[] = 'usuario o contraseña incorrecta!';
    }
-
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +34,7 @@ if(isset($_POST['submit'])){
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-   <link rel="stylesheet" href="../css/admin_style.css">
+   <link rel="stylesheet" href="../css/admin_style.css?v=<?php echo time(); ?> ">
 
 </head>
 <body>
@@ -59,8 +57,8 @@ if(isset($message)){
    <form action="" method="POST">
       <h3>¡bienvenido!</h3>
       <p>default usuario = <span>admin</span> | contraseña = <span>111</span></p>
-      <input type="text" name="name" maxlength="20" required placeholder="ingresa tu usuario" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" maxlength="20" required placeholder="ingresa tu contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="text" name="name" maxlength="20" required placeholder="ingresa tu usuario" class="box" oninput="this.value = this.value.replace(/\s/g, '')" autocomplete="off">
+      <input type="password" name="pass" maxlength="20" required placeholder="ingresa tu contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')" autocomplete="off">
       <input type="submit" value="login now" name="submit" class="btn">
    </form>
 </section>
