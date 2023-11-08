@@ -110,7 +110,6 @@ if(isset($_SESSION['user_id'])){
         ?>
     </div>
     </section>
-
     <!--seccion top 3 fin-->
 
 

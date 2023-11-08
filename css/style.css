@@ -383,7 +383,8 @@ header .flex  .profile .name{
 
 .products .box-container .box .cat:hover{
     color: var(--red);
-    text-decoration: underline;
+    text-decoration: underline;    
+    font-weight: 600;
 }
 
 .products .box-container .box .name{
@@ -421,6 +422,82 @@ header .flex  .profile .name{
 }
 
 
+
+
+
+
+
+/* ---------------------- */
+/* ------quick-view------ */
+/* ---------------------- */
+.quick-view form{
+    max-width: 40rem;
+    padding:2rem;
+    border:var(--border);    
+    border-radius: 1rem;
+    position: relative;
+    margin:0 auto;
+    margin-bottom: 50px;
+}
+
+.quick-view form img{
+    height: 25rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.quick-view form .cat{
+    font-size: 1.8rem;
+    color:var(--light-gray);
+}
+
+.quick-view form .cat:hover{
+    color:var(--red);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.quick-view form .name{
+    font-size: 3rem;
+    margin:.5rem 0;
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+.quick-view form .flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1.5rem;
+    margin:1rem 0;
+}
+
+.quick-view form .flex .price{
+    font-size: 2.5rem;
+    color:var(--dark-gray);
+}
+
+.quick-view form .flex .price span{
+    font-size: 2rem;
+    color:var(--light-gray);
+}
+
+.quick-view form .flex .qty{
+    border:var(--border);
+    padding:1rem;
+    font-size: 1.8rem;
+    color:var(--dark-gray);
+}
+
+.quick-view form .btn{
+    width: 100%;
+    padding:1rem 3rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-top: 1rem;
+}
 
 
 
