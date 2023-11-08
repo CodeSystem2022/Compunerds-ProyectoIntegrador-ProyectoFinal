@@ -22,23 +22,23 @@ if(isset($_POST['add_product'])){
     $image = filter_var($image, FILTER_SANITIZE_STRING);
     $image_size = $_FILES['image']['size'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
-    $image_folder = '../uploaded_img/'.$image;
+    $image_folder = '../images/'.$image;
 
     $select_products = $conn->prepare("SELECT * FROM `products` WHERE name = ?");
     $select_products->execute([$name]);
 
     if($select_products->rowCount() > 0){
-        $message[] = 'product name already exists!';
+        $message[] = 'ya existe ese nombre!';
     }else{
         if($image_size > 2000000){
-            $message[] = 'image size is too large';
+            $message[] = 'la imagen es muy grande';
         }else{
             move_uploaded_file($image_tmp_name, $image_folder);
 
             $insert_product = $conn->prepare("INSERT INTO `products`(name, category, price, image) VALUES(?,?,?,?)");
             $insert_product->execute([$name, $category, $price, $image]);
 
-            $message[] = 'new product added!';
+            $message[] = 'nuevo producto agregado!';
         }
     }
 }
@@ -48,7 +48,7 @@ if(isset($_GET['delete'])){
     $delete_product_image = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
     $delete_product_image->execute([$delete_id]);
     $fetch_delete_image = $delete_product_image->fetch(PDO::FETCH_ASSOC);
-    unlink('../uploaded_img/'.$fetch_delete_image['image']);
+    unlink('../image/'.$fetch_delete_image['image']);
     $delete_product = $conn->prepare("DELETE FROM `products` WHERE id = ?");
     $delete_product->execute([$delete_id]);
     $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE pid = ?");
@@ -82,10 +82,10 @@ if(isset($_GET['delete'])){
         <input type="number" min="0" max="9999999999" required placeholder="precio del producto" name="price" onkeypress="if(this.value.length == 10) return false;" class="box">
         <select name="category" class="box" required>
             <option value="" disabled selected>seleccionar categoria --</option>
-            <option value="main dish">burgers</option>
-            <option value="fast food">pizzas</option>
-            <option value="drinks">vegano</option>
-            <option value="desserts">sin gluten</option>
+            <option value="burgers">burgers</option>
+            <option value="pizzas">pizzas</option>
+            <option value="vegano">vegano</option>
+            <option value="sin gluten">sin gluten</option>
         </select>
         <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
         <input type="submit" value="agregar producto" name="add_product" class="btn">
@@ -105,7 +105,7 @@ if(isset($_GET['delete'])){
             while($fetch_products = $show_products->fetch(PDO::FETCH_ASSOC)){  
     ?>
     <div class="box">
-        <img src="../uploaded_img/<?= $fetch_products['image']; ?>" alt="">
+        <img src="../images/<?= $fetch_products['image']; ?>" alt="">
         <div class="flex">
             <div class="price"><span>$</span><?= $fetch_products['price']; ?><span>/-</span></div>
             <div class="category"><?= $fetch_products['category']; ?></div>

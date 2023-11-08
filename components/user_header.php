@@ -13,7 +13,7 @@ if(isset($message)){
 
 <header class="header">
     <section class="flex">
-        <a href="#" class="logo"><img src="images/burger_logo.png" alt="Burger Logo" height="22">FastFood</a>
+        <a href="#" class="logo"><img src="images/burger_logo.png" alt="Burger Logo" height="22">Burgizza</a>
 
         <nav class="navbar">
             <a href="home.php">home</a>
