@@ -28,10 +28,10 @@ if(isset($_POST['submit'])){
    $row = $select_user->fetch(PDO::FETCH_ASSOC);
 
    if($select_user->rowCount() > 0){
-      $message[] = 'email or number already exists!';
+      $message[] = 'el email o número ya existe!';
    }else{
       if($pass != $cpass){
-         $message[] = 'confirm password not matched!';
+         $message[] = 'no coincide las contraseñas!';
       }else{
          $insert_user = $conn->prepare("INSERT INTO `users`(name, email, number, password) VALUES(?,?,?,?)");
          $insert_user->execute([$name, $email, $number, $cpass]);
@@ -62,50 +62,6 @@ if(isset($_POST['submit'])){
 
    <link rel="icon" href="images/favicon_icon.png" type="image/png">
 
-   <style>
-      /* Estilos para el formulario */
-      .form-container {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-      }
-
-      .form-container form {
-         max-width: 400px;
-         margin: 0 auto;
-         padding: 20px;
-         border: 1px solid var(--light-gray);
-         border-radius: 10px;
-      }
-
-      .form-container form h3 {
-         font-size: 24px;
-         text-align: center;
-         margin-bottom: 20px;
-      }
-
-      .form-container form input {
-         margin: 10px 0;
-         padding: 10px;
-         border: 1px solid var(--light-gray);
-         border-radius: 5px;
-         width: 100%;
-         font-size: 16px;
-      }
-
-      .form-container form input[type="submit"] {
-         background-color: var(--red);
-         color: var(--white);
-         cursor: pointer;
-         font-weight: bold;
-      }
-
-      .form-container form p {
-         font-size: 16px;
-         text-align: center;
-         margin-top: 10px;
-      }
-   </style>
 </head>
 <body>
    
@@ -118,7 +74,7 @@ if(isset($_POST['submit'])){
       <h3>Regístrate</h3>
       <input type="text" name="name" required placeholder="Ingrese su nombre">
       <input type="email" name="email" required placeholder="Ingrese su email" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="number" name="number" required placeholder="Ingrese su numero" min="0" max="9999999999">
+      <input type="number" name="number" required placeholder="enter your number" class="box" min="0" max="9999999999" maxlength="10">
       <input type="password" name="pass" required placeholder="Ingrese su contraseña" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="cpass" required placeholder="Confirme su contraseña" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="Registrarte" name="submit" class="btn">
