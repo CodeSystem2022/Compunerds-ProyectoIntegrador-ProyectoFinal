@@ -44,9 +44,7 @@ if(isset($_POST['submit'])){
          }
       }
    }
-
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -72,11 +70,11 @@ if(isset($_POST['submit'])){
 <section class="form-container">
    <form action="" method="post">
       <h3>Regístrate</h3>
-      <input type="text" name="name" required placeholder="Ingrese su nombre">
-      <input type="email" name="email" required placeholder="Ingrese su email" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="number" name="number" required placeholder="enter your number" class="box" min="0" max="9999999999" maxlength="10">
-      <input type="password" name="pass" required placeholder="Ingrese su contraseña" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="cpass" required placeholder="Confirme su contraseña" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="text" name="name" required placeholder="Ingrese su nombre" class="box" maxlength="50">
+      <input type="email" name="email" required placeholder="Ingrese su email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="number" name="number" required placeholder="Ingrese su número" class="box" min="0" max="9999999999" maxlength="10">
+      <input type="password" name="pass" required placeholder="Ingrese su contraseña" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="cpass" required placeholder="Confirma su contraseña" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="Registrarte" name="submit" class="btn">
       <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión ahora!</a></p>
    </form>
