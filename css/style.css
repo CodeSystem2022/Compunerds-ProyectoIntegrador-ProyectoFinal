@@ -420,9 +420,141 @@ header .flex  .profile .name{
     background-color: var(--white);
 }
 
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
 
+.about .row .image{
+    flex:1 1 40rem;
+}
 
+.about .row .image img{
+    width: 100%;
+}
 
+.about .row .content{
+    flex:1 1 40rem;
+    text-align: center;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:var(--black);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p{
+    padding:1rem 0;
+    line-height: 2;
+    font-size: 1.6rem;
+    color:var(--light-color);
+}
+
+.steps .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+}
+
+.steps .box-container .box{
+    text-align: center;
+    border:var(--border);
+    padding:2rem;
+}
+
+.steps .box-container .box img{
+    height: 15rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.steps .box-container .box h3{
+    font-size: 2.3rem;
+    margin:1rem 0;
+    color:var(--black);
+    text-transform: capitalize;
+}
+
+.steps .box-container .box p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color:var(--light-color);
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.contact .row .image{
+    flex:1 1 40rem;
+}
+
+.contact .row .image img{
+    width: 100%;
+}
+
+.contact .row form{
+    border:var(--border);
+    flex:1 1 40rem;
+    padding:2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    font-size: 2.5rem;
+    color:var(--black);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.contact .row form .box{
+    margin:.7rem 0;
+    font-size: 1.8rem;
+    color:var(--black);
+    border:var(--border);
+    padding:1.4rem;
+    width: 100%;
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.search-form form{
+    display: flex;
+    gap:1.3rem;
+}
+
+.search-form form .box{
+    width: 100%;
+    border:var(--border);
+    padding:1.4rem;
+    font-size: 1.8rem;
+    color:var(--black);
+}
+
+.search-form form .fa-search{
+    width: 6rem;
+    background-color: var(--black);
+    color:var(--white);
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+.search-form form .fa-search:hover{
+    background-color: var(--yellow);
+    color:var(--black);
+}
 
 
 
