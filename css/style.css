@@ -72,7 +72,7 @@ section{
     justify-content: center;
     gap:1rem;
     flex-flow: column;
-    background-color: var(--dark-gray);
+    background-color: var(--white);
     min-height: 20rem;
 }
 
@@ -371,7 +371,6 @@ header .flex  .profile .account a:hover{
     color: var(--light-gray);
     padding: 1rem 0;
 }
-
 
 /* -------------------- */
 /* ------category------ */
@@ -771,6 +770,12 @@ header .flex  .profile .account a:hover{
     color: var(--dark-gray);    
     border-radius: 10px;
 }
+
+/* -------------------- */
+/* ------pedidos------ */
+/* -------------------- */
+
+
 
 /* Estilos para el formulario */
 .form-container {
