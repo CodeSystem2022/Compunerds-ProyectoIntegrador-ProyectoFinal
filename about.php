@@ -21,7 +21,7 @@ if(isset($_SESSION['user_id'])){
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>" >
+    <link rel="stylesheet" href="css/style.css"> 
 
     <link rel="icon" href="images/favicon_icon.png" type="image/png">
 
@@ -41,13 +41,13 @@ if(isset($_SESSION['user_id'])){
     <section class="about">
         <div class="row">
             <div class="image">
-                <img src="../images/about_chef2gif.gif" alt="chef">
+                <img src="images/about_chef2gif.gif" alt="chef">
             </div>
 
             <div class="content">
                 <h3>¿Por qué elegirnos?</h3>
 
-                <p>En CompuNerds, nos dedicamos a ofrecer comida deliciosa y de alta calidad a nuestros clientes. Nos preocupamos por ofrecer un servicio excelente y una experiencia de compra que sea memorable.</p>
+                <p>En Burgizza, nos dedicamos a ofrecer comida deliciosa y de alta calidad a nuestros clientes. Nos preocupamos por ofrecer un servicio excelente y una experiencia de compra que sea memorable.</p>
 
                 <ul>
                     <li>Comida deliciosa: utilizamos ingredientes frescos y de temporada para crear platos deliciosos que te encantarán.</li>
