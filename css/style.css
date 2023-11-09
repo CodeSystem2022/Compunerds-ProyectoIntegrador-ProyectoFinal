@@ -775,6 +775,31 @@ header .flex  .profile .account a:hover{
 /* ------pedidos------ */
 /* -------------------- */
 
+.orders .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: flex-start;
+}
+
+.orders .box-container .box{
+    padding:1rem 2rem;
+    border:var(--border);
+    flex:1 1 40rem;
+    border-radius: 10px;
+}
+
+.orders .box-container .box p{
+    line-height: 1.5;
+    margin:1rem 0;
+    font-size: 2rem;
+    color:var(--light-gray);
+}
+
+.orders .box-container .box p span{
+    color:var(--dark-gray);
+}
+
 
 
 /* Estilos para el formulario */

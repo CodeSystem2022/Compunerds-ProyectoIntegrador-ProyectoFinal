@@ -60,7 +60,7 @@ if(isset($_SESSION['user_id'])){
             <p>método de pago : <span><?= $fetch_orders['method']; ?></span></p>
             <p>tus pedidos : <span><?= $fetch_orders['total_products']; ?></span></p>
             <p>precio final : <span>$<?= $fetch_orders['total_price']; ?>/-</span></p>
-            <p>estado del pago : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
+            <p>estado del pago : <span style="color:<?php if($fetch_orders['payment_status'] == 'pendiente'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
             </div>
             <?php
             }

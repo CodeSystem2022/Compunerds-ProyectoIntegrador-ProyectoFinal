@@ -47,28 +47,28 @@ if(!isset($admin_id)){
         <?php
             $total_pendings = 0;
             $select_pendings = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
-            $select_pendings->execute(['pending']);
+            $select_pendings->execute(['pendiente']);
             while($fetch_pendings = $select_pendings->fetch(PDO::FETCH_ASSOC)){
                 $total_pendings += $fetch_pendings['total_price'];
             }
         ?>
         <h3><span>$</span><?= $total_pendings; ?><span>/-</span></h3>
         <p>pendientes</p>
-        <a href="placed_orders.php" class="btn">ver orders</a>
+        <a href="placed_orders.php" class="btn">ver pedidos</a>
     </div>
 
     <div class="box">
         <?php
             $total_completes = 0;
             $select_completes = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
-            $select_completes->execute(['completed']);
+            $select_completes->execute(['completado']);
             while($fetch_completes = $select_completes->fetch(PDO::FETCH_ASSOC)){
                 $total_completes += $fetch_completes['total_price'];
             }
         ?>
         <h3><span>$</span><?= $total_completes; ?><span>/-</span></h3>
         <p>completados</p>
-        <a href="placed_orders.php" class="btn">ver ordeness</a>
+        <a href="placed_orders.php" class="btn">ver pedidos</a>
     </div>
 
     <div class="box">
@@ -78,8 +78,8 @@ if(!isset($admin_id)){
             $numbers_of_orders = $select_orders->rowCount();
         ?>
         <h3><?= $numbers_of_orders; ?></h3>
-        <p>ordenes total</p>
-        <a href="placed_orders.php" class="btn">ver ordenes</a>
+        <p>pedidos total</p>
+        <a href="placed_orders.php" class="btn">ver pedidos</a>
     </div>
 
     <div class="box">
