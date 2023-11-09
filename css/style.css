@@ -66,8 +66,42 @@ section{
     text-transform: uppercase;
 }
 
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    flex-flow: column;
+    background-color: var(--black);
+    min-height: 20rem;
+}
+
+.heading h3{
+    font-size: 5rem;
+    color: var(--dark-gray);
+    text-transform: capitalize;
+}
+
+.heading p{
+    font-size: 2.3rem;
+}
+
+.heading p a{
+    color: var(--red);
+    text-decoration: none;
+}
+
+.heading p a:hover{
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.heading p span{
+    color: var(--light-gray);
+}
 
 .btn, .delete-btn{
+    margin-right: 1rem;
     display: inline-block;
     padding: .8rem 3rem;
     cursor: pointer;
@@ -134,6 +168,12 @@ section{
     color: var(--red);
     text-transform: capitalize;
     width: 100%;
+}
+
+.disabled{
+    opacity: .5;
+    user-select: none;
+    pointer-events: none;
 }
 
 .message{
@@ -333,9 +373,9 @@ header .flex  .profile .account a:hover{
 }
 
 
-/* ---------------- */
+/* -------------------- */
 /* ------category------ */
-/* ---------------- */
+/* -------------------- */
 .category .box_container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -378,9 +418,9 @@ header .flex  .profile .account a:hover{
     color: #fff;
 }
 
-/* ------------------ */
+/* --------------------- */
 /* ------productos------ */
-/* ------------------ */
+/* --------------------- */
 .products .box-container{    
     display: grid;
     grid-template-columns: repeat(auto-fit, 32rem);
@@ -404,7 +444,8 @@ header .flex  .profile .account a:hover{
     margin-bottom: 1rem;
 }
 
-.products .box-container .box .fa-eye, .products .box-container .box .fa-shopping-cart{
+.products .box-container .box .fa-eye, 
+.products .box-container .box .fa-shopping-cart{
     position: absolute;
     top: 1rem;
     height: 3.6rem;
@@ -413,9 +454,9 @@ header .flex  .profile .account a:hover{
     font-size: 1.5rem;
     border: var(--border);
     border-radius: .5rem;
-    background-color: var(--white);
-    line-height: 3.3rem;
+    background-color: var(--white);    
     color: var(--light-gray);
+    line-height: 3.3rem;
     text-align: center;
     transition: .2s linear;
 }
@@ -487,6 +528,86 @@ header .flex  .profile .account a:hover{
     background-color: var(--white);
 }
 
+.products .box-container .box .flex .fa-edit{
+    width: 3rem;    
+    border-radius: .5rem;
+    background-color: var(--white);    
+    color: var(--dark-gray);
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: 3rem;
+    border:var(--border);
+}
+
+.products .box-container .box .flex .fa-edit:hover{
+    border: .2rem solid var(--yellow);
+    background-color: var(--yellow);
+    color:var(--red);
+}
+
+.products .box-container .box .fa-times{
+    position: absolute;
+    top:1rem; right:1rem;    
+    border-radius: .5rem;
+    background-color: var(--white);
+    color:var(--light-gray);
+    border:var(--border);
+    line-height: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.products .box-container .box .fa-times:hover{
+    border: .2rem solid var(--yellow);
+    background-color: var(--yellow);
+    color:var(--red);
+}
+
+.products .box-container .box .sub-total{
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color:var(--light-color); 
+}
+
+.products .box-container .box .sub-total span{
+    color:var(--red);
+}
+
+.products .more-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.products .cart-total{
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+    border:var(--border);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.products .cart-total p{
+    font-size: 3rem;
+    color:var(--light-color);
+    padding-left: 2.5rem;
+}
+
+.products .cart-total p span{
+    color:var(--red);       
+    font-weight: bold;
+}
+
+.products .cart-total .btn{
+    margin-top: 0;
+}
 
 /* ---------------------- */
 /* ------quick-view------ */
@@ -670,6 +791,7 @@ header .flex  .profile .account a:hover{
 /* ------footer------ */
 /* ------------------ */
 .footer{
+    margin-top: 20px;
     text-align: center;
     background: linear-gradient(transparent, #dbdbdb);
 }
@@ -737,6 +859,14 @@ header .flex  .profile .account a:hover{
 @media(max-width:450px){
     html{
         font-size: 50%;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .heading h3{
+        font-size: 4rem;
     }
 
     header .flex .logo{
