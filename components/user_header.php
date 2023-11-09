@@ -19,7 +19,7 @@ if(isset($message)){
             <a href="home.php">home</a>
             <a href="about.php">about</a>            
             <a href="menu.php">menu</a>
-            <a href="order.php">orders</a>
+            <a href="orders.php">orders</a>
             <a href="contact.php">contact</a>
         </nav>
 
@@ -48,6 +48,7 @@ if(isset($message)){
                 <a href="profile.php" class="btn">perfil</a>
                 <a href="components/user_logout.php" onclick="return confirm('¿quieres cerrar sesión?');" class="delete-btn">cerrar sesión</a> 
             </div>
+            <p class="account"><a href="register.php">registrate</a> o <a href="login.php">logueate!</a></p>
             <?php
                 }else{
             ?>
