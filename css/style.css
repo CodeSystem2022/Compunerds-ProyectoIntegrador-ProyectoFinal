@@ -72,7 +72,7 @@ section{
     justify-content: center;
     gap:1rem;
     flex-flow: column;
-    background-color: var(--black);
+    background-color: var(--dark-gray);
     min-height: 20rem;
 }
 
@@ -568,7 +568,7 @@ header .flex  .profile .account a:hover{
 .products .box-container .box .sub-total{
     margin-top: 1rem;
     font-size: 1.8rem;
-    color:var(--light-color); 
+    color:var(--light-gray); 
 }
 
 .products .box-container .box .sub-total span{
@@ -596,7 +596,7 @@ header .flex  .profile .account a:hover{
 
 .products .cart-total p{
     font-size: 3rem;
-    color:var(--light-color);
+    color:var(--light-gray);
     padding-left: 2.5rem;
 }
 
@@ -681,6 +681,96 @@ header .flex  .profile .account a:hover{
     margin-top: 1rem;
 }
 
+/* ---------------------*/
+/* ------checkout------ */
+/* ---------------------*/
+
+.checkout form{
+    max-width: 50rem;
+    margin:0 auto;
+    border:var(--border);
+    padding:2rem;
+    border-radius: 10px;
+}
+
+.checkout form h3{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    padding: 2rem 0;
+    color:var(--dark-gray);
+}
+
+.checkout form .cart-items{
+    background-color: #dbdbdb;
+    padding:2rem;
+    padding-top: 0;
+    border-radius: 10px;
+}
+
+.checkout form .cart-items h3{
+    color:var(--red);
+}
+
+.checkout form .cart-items p{
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+    justify-content: space-between;
+    margin:1rem 0;
+    line-height: 1.5;
+    font-size: 2rem;
+}
+
+.checkout form .cart-items p .name{
+    color:var(--dark-gray);
+}
+
+.checkout form .cart-items p .price{
+    color:var(--dark-gray);    
+}
+
+.checkout form .cart-items .grand-total{
+    background-color: var(--red);
+    padding:.5rem 1.5rem;
+}
+
+.checkout form .cart-items .grand-total .price{
+    color:var(--yellow);    
+    font-weight: 700;
+}
+
+.checkout form .user-info h3{
+    color:var(--dark-gray);
+    margin: 1rem 0;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+
+.checkout form .user-info p{ 
+    font-size: 1.8rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+.checkout form .user-info p i{
+    color: var(--light-gray);
+    margin-right: 1rem;
+}
+
+.checkout form .user-info p span{
+    color: var(--dark-gray);
+}
+
+.checkout form .user-info .box{
+    width: 100%;
+    border: var(--border);
+    padding: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: var(--dark-gray);    
+    border-radius: 10px;
+}
 
 /* Estilos para el formulario */
 .form-container {

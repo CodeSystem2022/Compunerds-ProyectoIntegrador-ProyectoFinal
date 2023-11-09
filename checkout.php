@@ -79,7 +79,7 @@ if(isset($_POST['submit'])){
     <section class="checkout">
         <h1 class="title">resumen del pedido</h1>
 
-        <form action="" method="post">
+        <form action="" method="POST">
             <div class="cart-items">
                 <h3>productos</h3>
                 <?php
