@@ -41,42 +41,38 @@ include 'components/add_cart.php';
 <!-- sección menú inicio  -->
 
 <section class="products">
-
-    <h1 class="title">Últimos platos</h1>
-
+    <h1 class="title">nuestras delicias</h1>
     <div class="box-container">
-
         <?php
-            $select_products = $conn->prepare("SELECT * FROM `products`");
-            $select_products->execute();
-            if($select_products->rowCount() > 0){
-                while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
+            $select_products = $conn -> prepare("SELECT * FROM `products`");
+            $select_products -> execute();
+            if($select_products -> rowcount() > 0){
+                while($fetch_products = $select_products -> fetch(PDO::FETCH_ASSOC)){
+
         ?>
-        <form action="" method="post" class="box">
-            <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
+        <form action = "" method="POST" class="box">
+            <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">            
             <input type="hidden" name="name" value="<?= $fetch_products['name']; ?>">
             <input type="hidden" name="price" value="<?= $fetch_products['price']; ?>">
             <input type="hidden" name="image" value="<?= $fetch_products['image']; ?>">
             <a href="quick_view.php?pid=<?= $fetch_products['id']; ?>" class="fas fa-eye"></a>
-            <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button>
-            <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
+            <button type="submit" name="add_to_cart" class="fas fa-shopping-cart"></button>
+            <img src="images/<?= $fetch_products['image']; ?>" alt="producto" class="image">
             <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
             <div class="name"><?= $fetch_products['name']; ?></div>
             <div class="flex">
                 <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
-                <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2"">
+                <input type="number" name="qty" class="qty" value="1" min="1" max="99" maxlength="2">
             </div>
         </form>
         <?php
-            }
+                }
             }else{
-                echo '<p class="empty">Aún no se han añadido productos!</p>';
+                echo '<div class="empty">aún no se han añadido productos!</div>';
             }
         ?>
-
     </div>
-
-</section>
+    </section>
 
 <!-- sección menu final -->
 

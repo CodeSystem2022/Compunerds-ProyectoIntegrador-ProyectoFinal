@@ -37,10 +37,8 @@ include 'components/add_cart.php';
     <div class="home" id="home">
         <div class="content">
             <h3>Más sabor, menos espera</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, dolorem? 
-                Vel nisi nesciunt dicta quisquam porro, praesentium amet at placeat sint explicabo? 
-                Atque maiores illum dolor at fugit ullam quidem?</p>
-            <a href="#" class="btn">Ordena Ya!</a>
+            <p>Saborea la rapidez de la deliciosa comida en tu puerta. Cada plato está cuidadosamente preparado para brindarte un festín de sabores en el menor tiempo posible. ¡No esperes, disfruta!</p>
+            <a href="menu.php" class="btn">Ordena Ya!</a>
         </div>
         <div class="image">
             <img src="images/home_burger.png" alt="burger">
@@ -107,7 +105,7 @@ include 'components/add_cart.php';
         <?php
                 }
             }else{
-                echo '<div class="empty">no se eligieron productos!</div>';
+                echo '<div class="empty">aún no se han añadido productos!</div>';
             }
         ?>
     </div>
