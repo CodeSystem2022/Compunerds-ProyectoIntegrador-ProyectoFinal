@@ -67,19 +67,19 @@ if(isset($_SESSION['user_id'])){
         <h1 class="title">Simples pasos</h1>
         <div class="box_container">
             <div class="box">
-                <img src="../images/about-step1.png" alt="paso 1">
+                <img src="images/about-step1.png" alt="paso 1">
                 <h3>Elige del menú</h3>
                 <p>En nuestro menú encontrarás una amplia variedad de platos para elegir, desde platos tradicionales hasta platos internacionales. Tenemos algo para todos los gustos.</p>
                 <p>Puedes navegar por nuestro menú por tipo de comida, precio o ingredientes. También puedes buscar platos específicos por nombre.</p>
             </div>
             <div class="box">
-                <img src="../images/about-step2.png" alt="paso 1">
+                <img src="images/about-step2.png" alt="paso 1">
                 <h3>Delivery súper rápido</h3>
                 <p>Sabemos que el tiempo es importante, por eso ofrecemos un servicio de delivery súper rápido. Tu pedido llegará a tu puerta en minutos.</p>
                 <p>Nuestros repartidores están capacitados para entregar tu comida de forma rápida y segura.</p>
             </div>
             <div class="box">
-                <img src="../images/about-step3.png" alt="paso 1">
+                <img src="images/about-step3.png" alt="paso 1">
                 <h3>¡Disfruta tu comida!</h3>
                 <p>Una vez que hayas recibido tu pedido, es hora de disfrutarlo. ¡No te olvides de compartir una foto en las redes sociales!</p>
                 <p>Nos encanta ver a nuestros clientes disfrutando de nuestra comida.</p>
