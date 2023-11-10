@@ -527,73 +527,93 @@ header .flex  .profile .account a:hover{
     background-color: var(--white);
 }
 
+/* -------------------------- */
+/* ------sobre nosotros------ */
+/* -------------------------- */
+
 .about .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap:1.5rem;
+    gap: 1.5rem;
+    margin-top: -5rem;
 }
 
 .about .row .image{
-    flex:1 1 40rem;
+    flex: 1 1 20rem;
+    margin-left: 10rem;
 }
 
 .about .row .image img{
-    width: 100%;
+    width: 90%;
 }
 
 .about .row .content{
-    flex:1 1 40rem;
+    flex: 1 1 15rem;
     text-align: center;
+    margin-right: 10rem;
+    margin-top: 8rem;
 }
 
 .about .row .content h3{
-    font-size: 3rem;
-    color:var(--black);
+    font-size: 3.5rem;
+    color: var(--dark-gray);    
     text-transform: capitalize;
     margin-bottom: 1rem;
 }
 
 .about .row .content p{
-    padding:1rem 0;
+    padding: 1rem 0;
     line-height: 2;
-    font-size: 1.6rem;
-    color:var(--light-color);
+    font-size: 1.8rem;
+    color: var(--light-gray);
 }
 
-.steps .box-container{
+.steps .box_container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
     align-items: flex-start;
 }
 
-.steps .box-container .box{
+.steps .box_container .box{
     text-align: center;
-    border:var(--border);
-    padding:2rem;
+    border: .2rem solid var(--light-gray);
+    padding: 2rem;  
+    border-radius: .5rem;
 }
 
-.steps .box-container .box img{
-    height: 15rem;
+.steps .box_container .box img{
+    height: 13rem;
     width: 100%;
     object-fit: contain;
-    margin-bottom: 1rem;
 }
 
-.steps .box-container .box h3{
+.steps .box_container .box h3{
     font-size: 2.3rem;
-    margin:1rem 0;
-    color:var(--black);
+    margin: 1rem 0;
+    color: var(--dark-gray);
     text-transform: capitalize;
 }
 
-.steps .box-container .box p{
+.steps .box_container .box p{
     line-height: 2;
     font-size: 1.6rem;
-    color:var(--light-color);
+    color: var(--light-gray);
 }
 
+
+
+
+
+
+
+
+
+
+/* ---------------------*/
+/* ------contacto------ */
+/* -------------------- */
 .contact .row{
     display: flex;
     align-items: center;
