@@ -53,9 +53,10 @@ if(isset($_SESSION['user_id'])){
                 </div>
             </div>
         </section>
-        <!--seccion about fin-->    
+        <!--seccion about fin-->        
 
         <!--seccion pasos inicio-->
+
         <section class="steps">
             <h1 class="title">Simples pasos</h1>
             <div class="box_container">
@@ -75,13 +76,12 @@ if(isset($_SESSION['user_id'])){
                     <p>Una vez que hayas recibido tu pedido, es hora de disfrutarlo. ¡No te olvides de compartir una foto en las redes sociales!</p>
                 </div>
             </div>
-        </section>
-        <!--seccion pasos fin--> 
+        </section>      
+        <!--seccion pasos fin-->
 
         <!-- footer section starts  -->
         <?php include 'components/footer.php'; ?>
         <!-- footer section ends -->=
-
 
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
