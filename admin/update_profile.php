@@ -19,7 +19,7 @@ if(!isset($admin_id)){
         $select_name = $conn->prepare("SELECT * FROM `admin` WHERE name = ?");
         $select_name->execute([$name]);
         if($select_name->rowCount() > 0){
-            $message[] = 'username already taken!';
+            $message[] = 'el usuario ya existe!';
         }else{
             $update_name = $conn->prepare("UPDATE `admin` SET name = ? WHERE id = ?");
             $update_name->execute([$name, $admin_id]);
@@ -40,16 +40,16 @@ if(!isset($admin_id)){
 
     if($old_pass != $empty_pass){
         if($old_pass != $prev_pass){
-            $message[] = 'old password not matched!';
+            $message[] = 'no coincide la contraseña antigua!';
         }elseif($new_pass != $confirm_pass){
-            $message[] = 'confirm password not matched!';
+            $message[] = 'no se pudo confirmar la contraseña!';
         }else{
             if($new_pass != $empty_pass){
                 $update_pass = $conn->prepare("UPDATE `admin` SET password = ? WHERE id = ?");
                 $update_pass->execute([$confirm_pass, $admin_id]);
-                $message[] = 'password updated successfully!';
+                $message[] = 'contraseña editada con éxito!';
             }else{
-                $message[] = 'please enter a new password!';
+                $message[] = 'por favor, ingresa una nueva contraseña!';
             }
         }
     }
@@ -63,7 +63,7 @@ if(!isset($admin_id)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile update</title>
+    <title>editar perfil</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -76,12 +76,12 @@ if(!isset($admin_id)){
 
 <section class="form-container">
     <form action="" method="POST">
-        <h3>update profile</h3>
+        <h3>editar perfil</h3>
         <input type="text" name="name" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')" placeholder="<?= $fetch_profile['name']; ?>">
-        <input type="password" name="old_pass" maxlength="20" placeholder="enter your old password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-        <input type="password" name="new_pass" maxlength="20" placeholder="enter your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-        <input type="password" name="confirm_pass" maxlength="20" placeholder="confirm your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-        <input type="submit" value="update now" name="submit" class="btn">
+        <input type="password" name="old_pass" maxlength="20" placeholder="ingresa la contraseña antigua" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+        <input type="password" name="new_pass" maxlength="20" placeholder="ingresa la contraseña nueva" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+        <input type="password" name="confirm_pass" maxlength="20" placeholder="repite la contraseña nueva" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+        <input type="submit" value="editar" name="submit" class="btn">
     </form>
 </section>
 

@@ -15,7 +15,7 @@ if(isset($_POST['update_payment'])){
     $payment_status = $_POST['payment_status'];
     $update_status = $conn->prepare("UPDATE `orders` SET payment_status = ? WHERE id = ?");
     $update_status->execute([$payment_status, $order_id]);
-    $message[] = 'payment status updated!';
+    $message[] = 'estado de pago actualizado!';
 
 }
 
@@ -70,8 +70,8 @@ if(isset($_GET['delete'])){
             <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">
             <select name="payment_status" class="drop-down">
                 <option value="" selected disabled><?= $fetch_orders['payment_status']; ?></option>
-                <option value="pending">pendiente</option>
-                <option value="completed">completado</option>
+                <option value="pendiente">pendiente</option>
+                <option value="completado">completado</option>
             </select>
             <div class="flex-btn">
                 <input type="submit" value="update" class="btn" name="update_payment">
